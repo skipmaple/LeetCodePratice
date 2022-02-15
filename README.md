@@ -15,4 +15,4 @@ All source codes are my original works, except some files which have been acknow
 So, some solutions are working in a tricky way and some others are worked ineffectively.
 Please feel free to issue it!
 
-200 questions passed at Augest 19, 2015.
+200 questions passed.
