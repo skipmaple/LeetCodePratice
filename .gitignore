@@ -1,0 +1,6 @@
+out/
+.idea/
+tests
+src/*.class
+
+ForLeetCode.iml
