@@ -2,7 +2,7 @@
 
 require '../0005_longest-palindromic-substring/longest-palindromic-substring'
 
-RSpec.describe do
+RSpec.describe "" do
 
   context 'Test' do
     it 't1' do
