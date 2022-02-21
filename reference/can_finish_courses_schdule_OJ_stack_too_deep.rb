@@ -1,4 +1,4 @@
-## Wrong ::Stack too deep!(on leetcode)
+## Wrong ::Stack too deep!(on algorithms)
 def can_finish(num_courses, prerequisites)
   graph=[]
   num_courses.times{graph<<[]}
