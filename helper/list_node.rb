@@ -11,12 +11,12 @@ class ListNode
   class << self
     def generate(array)
       array.map! { |v| ListNode.new(v) }
-      array.length.times { |i| array[i].next = array[i+1] }
+      array.length.times { |i| array[i].next = array[i + 1] }
       array.first
     end
   end
 
-  def initialize(value)
+  def initialize(value = 0)
     @val = value
     @next = nil
   end
@@ -29,5 +29,12 @@ class ListNode
     print @val
     print ' -> ' if self.next
     self.next.traverse if self.next
+  end
+
+  def to_a(res = [])
+    res << @val
+    return res unless self.next
+
+    self.next.to_a(res)
   end
 end
