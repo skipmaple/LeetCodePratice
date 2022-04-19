@@ -1,33 +1,12 @@
 # @param {Integer} n
 # @return {String}
 def count_and_say(n)
-  arr = []
-  arr[0] = '1'
-  (n - 1).times do |i|
-    arr[i] = counting(arr[i - 1])
-  end
+  return "1" if n == 1
+  say(count_and_say(n - 1))
 end
 
-def counting(num_str)
-  if num_str == '1'
-    return '11'
-  end
-
-  res = ''
-  last = num_str[-1]
-  count_size = 1
-  i = num_str.size - 2
-  while i >= 0
-    current = num_str[i]
-    if current == last
-      last = current
-      count_size += 1
-    else
-      res = "#{count_size}#{last}" + res
-      last = current
-    end
-    i -= 1
-  end
-
-  res
+def say(str)
+  # 这行没看懂
+  prev = str.split(/(1+)|(2+)|(3+)/).delete_if { |item| item.empty? }
+  prev.map { |item| item.length.to_s + item[0] }.join
 end
