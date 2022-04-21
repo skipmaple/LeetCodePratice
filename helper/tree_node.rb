@@ -1,6 +1,6 @@
 # USAGE
-# 1. generate by array, use '#' instead of nil node
-#   the_tree = TreeNode.generate([1,'#',2,3,4]) # -->  1
+# 1. generate by array, use nil instead of nil node
+#   the_tree = TreeNode.generate([1,nil,2,3,4]) # -->  1
 #                                                       \
 #                                                        2
 #                                                       / \
@@ -20,8 +20,8 @@ class TreeNode
         if cur_level.any?
           tree = cur_level.shift
           left, right = arr.shift, arr.shift
-          next_level << (tree.left = TreeNode.new(left)) if left != '#'
-          next_level << (tree.right = TreeNode.new(right)) if right != '#'
+          next_level << (tree.left = TreeNode.new(left)) if left != nil
+          next_level << (tree.right = TreeNode.new(right)) if right != nil
         else
           cur_level, next_level = next_level, []
         end
@@ -58,7 +58,6 @@ class TreeNode
 
   def level_order
     queue = [self]
-    puts queue
     while queue.size > 0
       tr = queue.shift
       queue << tr.left if tr.left
