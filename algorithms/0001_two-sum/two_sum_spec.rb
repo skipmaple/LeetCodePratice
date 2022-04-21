@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require './two_sum'
+require './0001_two-sum/two_sum'
 
 RSpec.describe  do
 
