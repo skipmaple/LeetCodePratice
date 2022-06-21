@@ -26,5 +26,5 @@ def four_sum(nums, target)
       end
     end
   end
-  res
+  res.uniq
 end
